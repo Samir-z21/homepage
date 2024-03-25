@@ -1,0 +1,628 @@
+:root{
+    --boxShadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.5);
+    --rootFont: 'Playfair Display'  , 'Roboto', sans-serif;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: var(--rootFont);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+header {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    margin-top: 30px;
+    width:  clamp(61%, 1200px, 95%);
+}
+
+.design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px; 
+    background-color: rgb(8,145,178);
+    clip-path: polygon(0 0, 150% 0, 50px 100%, 0 100%);
+}
+
+#secretPic {
+    display: none;
+}
+
+#pictures {
+    position: relative;   
+}
+
+.name {
+    width: 100%;
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#hiddenName {
+    display: none;
+}
+
+.aboutMe {
+    position: relative;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 20px;
+    box-shadow: var(--boxShadow);
+    padding: 50px 30px;
+    max-width: 840px;
+    background-color: white;
+}
+
+.hiddenAboutMe {
+    display: none;
+}
+
+.aboutMe h2 {
+    font-size: 2.1em;
+}
+
+.aboutMeText {
+    font-family: 'Roboto';
+    font-size: 1.2em;
+    color: rgb(56,56,56);
+    line-height: 1.5;
+}
+
+.aboutMeLinks {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+
+.aboutMeIcons {
+    height: 30px;
+}
+
+
+/* middle section style */
+
+.myWork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width:  clamp(61%, 1200px, 95%);
+}
+
+.myWork h3{
+    font-size: 2em;
+}
+
+.cardContainers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+
+.cardContainers > :nth-child(1) > .card-top {
+    background-color: rgb(124,117,202)
+}
+
+.cardContainers > :nth-child(2) > .card-top {
+    background-color: rgb(216,143,57)
+}
+.cardContainers > :nth-child(3) > .card-top, 
+.cardContainers > :nth-child(6) > .card-top {
+    background-color: rgb(94,143,77)
+}
+.cardContainers > :nth-child(4) > .card-top {
+    background-color: rgb(202,117,153)
+}
+.cardContainers > :nth-child(5) > .card-top {
+    background-color:rgb(70,146,217)
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--boxShadow);
+}
+
+.card-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card-top p {
+    margin: 80px 0px;
+    color: white; 
+    font-size: 1.9em;
+    text-align: center ;
+
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 15px;
+}
+
+.bottomTop {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+}
+
+.bottom-bottom {
+    color: rgb(86,86,86);
+    width: 250px;
+    font-family: 'Roboto';
+}
+
+.cardIcons {
+    width: 22px;
+}
+
+picture img {
+    height: 400px;
+    box-shadow: var(--boxShadow);
+}
+
+#footerPic {
+    margin-bottom: 20px;
+}
+
+
+/* footer style */
+
+footer  {
+    margin-top: 100px;
+    background-color: rgb(8,145,178);
+    color: white;
+    padding-top: 30px;
+    font-size: 1.2em;
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 375px;
+}
+
+.leftSide h3 {
+    font-family: var(--rootFont);
+    font-size: 2.1em;
+    font-weight: 750;
+}
+
+.footerText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerText div {
+    display: flex;
+    gap: 10px;
+}
+
+
+.footerText div > p {
+    font-size: 0.9em;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    width:  clamp(61%, 1200px, 95%);
+
+}
+
+.contactIcons{
+    width: 20px;
+    fill: white;
+}
+
+.footerLinks {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerIcons {
+    width: 35px;
+}
+
+
+/* media queries for tablet 1000px to 600px */
+
+@media(max-width: 1000px) {
+   
+    .aboutMe {
+        position: relative;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        gap: 0px;
+        box-shadow: var(--boxShadow);
+        padding: 0px 0px;
+        max-width: 90%;
+        font-size: 1.3em;
+        margin:  150px 0px 0px 50px;
+        background-color: white;
+    }
+
+
+  
+    /* position: relative;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 20px;
+    box-shadow: var(--boxShadow);
+    padding: 50px 30px;
+    max-width: 840px; */
+    
+    .visibleAboutMe {
+        display: none;
+    }
+
+    
+    .aboutMeText {
+        padding-top: 0px;
+        padding-bottom: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin: 0px 0px 0px 0px;
+        font-family: 'Roboto';
+        font-size: 1.2em;
+        color: rgb(56,56,56);
+        line-height: 1.5; 
+    }
+
+    /* font-family: 'Roboto';
+        font-size: 1.2em;
+        color: rgb(56,56,56);
+        line-height: 1.5; */
+
+    
+    #secretPic {
+        position: relative;
+        float: left;
+        display: inline;
+        max-width: 35%;
+        transform: scale(1.2) translate(-50px, -50px);;
+        padding: 0px 10px 0px 0px;
+        margin-bottom: -20px;
+        margin-right: -20px;
+    }
+    
+
+    #secretPic img {
+        width: 100%;
+        height: auto;
+    }
+    .name {
+        max-width: 100%;
+        position: absolute;
+        white-space: nowrap;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%, -250px);
+        font-size: 2.4em;
+        font-weight: 500;
+        font-family: 'Playfair Display',serif;
+    }
+
+    .hiddenAboutMe {
+        font-family: 'Playfair Display',serif;
+        font-weight: 600;
+        color: black;
+        white-space: nowrap;
+        display: block;
+        width: 100%;
+        padding: 50px 0px 20px 0px;
+        text-align: center;
+    }
+
+    
+
+    #hiddenName {
+        display: block;
+        z-index: 4;
+        margin-top: 150px;
+    }
+    
+    #pictures {
+        display: none;
+    }
+    .aboutMeLinks {
+        display: none;
+    }
+    /* main */
+
+    .cardContainers {
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+        gap: 30px;
+        width: 100%;
+    }
+
+    /* footer */
+
+    #footerPic img {
+        transform: translateY(20px);
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .footerLinks {
+        margin-bottom: 30px;
+    }
+   
+    
+}
+
+
+@media(max-width: 600px) {
+    
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutMe {
+        position: static;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        text-align: center;
+        gap: 25px;
+        box-shadow: none;
+        padding: 0px 0px;
+        max-width: 100%;
+        font-size: 1.2em;
+        margin:  0px 0px 0px 0px;
+        background-color: white;
+    }
+
+    .aboutMe h2 {
+        font-size: 1.8em;
+        font-weight: 700;
+    }
+
+
+    .design {
+        height: 125vw;
+        clip-path: polygon(0 0, 150% 0, 0px 100%, 0 100%);
+    }
+
+    .aboutMeText {
+        z-index: 4;
+        padding: 0px;
+        margin: 0px 0px 0px 0px;
+        font-family: 'Roboto';
+        font-size: 1.2em;
+        color: rgb(56,56,56);
+        line-height: 1.5; 
+    }
+
+    
+    
+    .name {
+        max-width: 80%;
+        white-space: nowrap;
+        transform: translate(0px);
+        font-weight: 500;
+        font-size: 50px;
+        font-family: 'Playfair Display',serif;
+    }
+
+    .hiddenAboutMe {
+        z-index: 5;
+        font-family: 'Playfair Display',serif;
+        font-weight: 600;
+        color: black;
+        white-space: nowrap;
+        display: block;
+        width: 100%;
+        padding: 50px 0px 20px 0px;
+        text-align: center;
+    }
+
+ 
+    
+
+    
+    #pictures {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+
+    #pictures p {
+        font-family: 'Playfair Display',serif;
+        text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5);
+        max-width: 85%;
+        position: absolute;
+        top: 89%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        font-size: calc(16px + 7vw);
+        text-align: center;
+    }
+    
+    #pictures img {
+        width: 85%;
+        height: auto;
+    }
+    
+    .aboutMeLinks {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .aboutMeIcons {
+        height: 35px;
+    }
+
+
+
+    .visibleAboutMe {
+        display: none;
+    }
+
+    #secretPic {
+        display: none;
+    }
+    
+    #hiddenName {
+        display: none;
+    }
+    /* main */
+
+    .cardContainers {
+        grid-template-columns: repeat(auto-fill, minmax(275px, 70%));
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    /* footer */
+
+    footer  {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 100px;
+        background-color: rgb(8,145,178);
+        color: white;
+        padding-top: 30px;
+        font-size: 1.1em;
+        font-family: 'Roboto';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .leftSide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 90%;
+        padding-left: 20px;
+
+    }
+
+    
+
+    .leftSide h3 {
+        display: flex;
+        justify-content: center;
+        font-family: var(--rootFont);
+        font-size: 2.1em;
+        font-weight: 750;
+    }
+    
+    .footerText {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .shorter {
+        width: 70%;
+    }
+
+
+    .footerText div {
+        display: flex;
+        gap: 10px;
+    }
+    
+    
+    .footerText div > p {
+        font-size: 0.9em;
+    }
+    
+    .footerContainer {
+        display: flex;
+        justify-content: space-between;
+        width:  100%;
+    
+    }
+    
+    .contactIcons{
+        display: none;
+        width: 20px;
+        fill: white;
+    }
+
+    .email {
+        margin-top: -20px;
+    }
+    
+    .footerLinks {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .footerIcons {
+        width: 35px;
+    }
+
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+    }
+
+    #footerPic img {
+        transform: translateY(0px);
+        padding: 0px;
+        margin: 0px;
+        height: 500px;
+        width: auto;
+        margin-bottom: -50px;
+    }
+
+    .footerLinks {
+        margin-bottom: 30px;
+    }
+   
+}
+
